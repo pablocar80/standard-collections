@@ -1,0 +1,7 @@
+{
+    "files.exclude": {
+        "lib/": true,
+        "node_modules/": true
+    }
+
+}

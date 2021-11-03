@@ -1,6 +1,6 @@
 {
   "name": "standard-collections",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Standard collections in TypeScript / JavaScript",
   "main": "index.js",
   "devDependencies": {

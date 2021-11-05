@@ -1,6 +1,6 @@
-import LinkedNode from "./linked-node";
+import { LinkedNode } from "./linked-node";
 
-export default class Queue<T> {
+export class Queue<T> {
     first?: LinkedNode<T>;
     last?: LinkedNode<T>;
 

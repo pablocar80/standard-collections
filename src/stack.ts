@@ -1,6 +1,6 @@
-import LinkedNode from "./linked-node";
+import { LinkedNode } from "./linked-node";
 
-export default class Stack<T> {
+export class Stack<T> {
     first?: LinkedNode<T>;
 
     isEmpty(): boolean {

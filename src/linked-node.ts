@@ -1,4 +1,4 @@
-export default class LinkedNode<T> {
+export class LinkedNode<T> {
     value: T;
     next?: LinkedNode<T>;
 

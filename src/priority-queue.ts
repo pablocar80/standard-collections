@@ -77,7 +77,7 @@ export class PriorityQueue<T> {
             const last = this.data[this.data.length - 1];
             this.data.pop();
             this.data[0] = last;
-            this.bubbleUp(this.data.length - 1);   
+            this.bubbleDown(0);
         } else {
             this.data.pop();
         }

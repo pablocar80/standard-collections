@@ -1,4 +1,4 @@
-import Stack from "../src/stack";
+import { Stack } from "../src/stack";
 
 test("simple stack", () => {
     const s = new Stack<number>();

@@ -1,4 +1,4 @@
-import Queue from "../src/queue";
+import { Queue } from "../src/queue";
 
 test("empty queue", () => {
     const q = new Queue<number>();

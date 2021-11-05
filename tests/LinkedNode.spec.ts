@@ -1,4 +1,4 @@
-import LinkedNode from "../src/linked-node";
+import { LinkedNode } from "../src/linked-node";
 
 test("linked node", () => {
     const n1 = new LinkedNode(5);

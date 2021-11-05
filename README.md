@@ -83,4 +83,5 @@ q.insert({ customer: "tom", price: 11.4 });
 
 console.log(q.extract().customer);  // elsa
 console.log(q.extract().customer);  // john
-console.log(q.extract().customer);  // tom```
+console.log(q.extract().customer);  // tom
+```

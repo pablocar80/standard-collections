@@ -1,8 +1,8 @@
 import { LinkedNode } from "./linked-node";
 
 export class Queue<T> {
-    first?: LinkedNode<T>;
-    last?: LinkedNode<T>;
+    private first?: LinkedNode<T>;
+    private last?: LinkedNode<T>;
 
     enqueue(value: T): void {
         const node = new LinkedNode(value);

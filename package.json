@@ -28,7 +28,7 @@
     "type": "git",
     "url": "git+https://github.com/pablocar80/standard-collections.git"
   },
-  "keywords": [],
+  "keywords": ["collection", "collections", "generic", "stack", "priority", "queue", "linked", "list"],
   "author": "Pablo Carbonell",
   "license": "MIT",
   "bugs": {

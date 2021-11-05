@@ -32,7 +32,7 @@ export class PriorityQueue<T> {
     }
 
     private isLower(index1: number, index2: number): boolean {
-        return this.comparator(this.data[index1], this.data[index2]) > 0;
+        return this.comparator(this.data[index1], this.data[index2]) < 0;
     }
 
     private swap(index1: number, index2: number): void {
@@ -54,10 +54,10 @@ export class PriorityQueue<T> {
     private getDownCandidate(index: number): number {
         let minIndex = index;
         const [left, right] = getLeftRight(index);
-        if (left < this.data.length && this.comparator(this.data[left], this.data[minIndex]) > 0) {
+        if (left < this.data.length && this.comparator(this.data[left], this.data[minIndex]) < 0) {
             minIndex = left;
         }
-        if (right < this.data.length && this.comparator(this.data[right], this.data[minIndex]) > 0) {
+        if (right < this.data.length && this.comparator(this.data[right], this.data[minIndex]) < 0) {
             minIndex = right;
         }
         return minIndex;

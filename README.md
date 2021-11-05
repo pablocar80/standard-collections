@@ -41,11 +41,11 @@ console.log(q.dequeue()); // 3
 
 ## Priority Queue
 
-A priority queue is a queue that will always extract the highest priority value.
+A priority queue will always extract the priority value that comes first.
 
-The constructor parameters are optional: an initial list of values and/or custom comparison function.
+Constructor parameters (optional): initial values, custom comparison function.
 
-The priority supports the operations `insert`, `extract`, `peek`, `isEmpty`, `size`, `clear`.
+Supported operations: `insert`, `extract`, `peek`, `isEmpty`, `size`, `clear`.
 
 Example with standard comparison operators:
 
@@ -58,9 +58,9 @@ p.insert(10);
 p.insert(4);
 p.insert(8);
 
-console.log(p.extract()); // 10
-console.log(p.extract()); // 8
 console.log(p.extract()); // 4
+console.log(p.extract()); // 8
+console.log(p.extract()); // 10
 ```
 
 Example with custom comparison:
@@ -74,7 +74,7 @@ interface Bid {
 }
 
 const q = new PriorityQueue<Bid>({
-    comparator: (a, b) => a.price - b.price,
+    comparator: (a, b) => b.price - a.price,
 });
 
 q.insert({ customer: "john", price: 11.5 });

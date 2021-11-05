@@ -42,7 +42,10 @@ console.log(q.dequeue()); // 3
 ## Priority Queue
 
 A priority queue is a queue that will always extract the highest priority value.
-The constructor parameters are, optionally, an initial list of values and/or custom comparison function.
+
+The constructor parameters are optional: an initial list of values and/or custom comparison function.
+
+The priority supports the operations `insert`, `extract`, `peek`, `isEmpty`, `size`, `clear`.
 
 Example with standard comparison operators:
 

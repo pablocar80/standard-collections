@@ -68,18 +68,19 @@ Example with custom comparison:
 ```typescript
 import { PriorityQueue } from "standard-collections";
 
-const bids = [
-    { customer: "john", price: 11.5 },
-    { customer: "elsa", price: 11.7 },
-    { customer: "tom", price: 11.4 },
-];
+interface Bid {
+    customer: string;
+    price: number;
+}
 
-const q = new PriorityQueue({
-    initialValues: bids,
+const q = new PriorityQueue<Bid>({
     comparator: (a, b) => a.price - b.price,
 });
 
+q.insert({ customer: "john", price: 11.5 });
+q.insert({ customer: "elsa", price: 11.7 });
+q.insert({ customer: "tom", price: 11.4 });
+
 console.log(q.extract().customer);  // elsa
 console.log(q.extract().customer);  // john
-console.log(q.extract().customer);  // tom
-```
+console.log(q.extract().customer);  // tom```

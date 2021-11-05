@@ -1,7 +1,7 @@
 import { LinkedNode } from "./linked-node";
 
 export class Stack<T> {
-    first?: LinkedNode<T>;
+    private first?: LinkedNode<T>;
 
     isEmpty(): boolean {
         return !this.first;

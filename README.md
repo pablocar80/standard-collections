@@ -3,7 +3,7 @@ Standard collections in TypeScript / JavaScript
 
 ## Stack
 
-A stack is a first-in last-out collection.
+A stack is a last-in first-out collection.
 It implements `push`, `pop`, `peek`, `isEmpty`.
 
 ```typescript

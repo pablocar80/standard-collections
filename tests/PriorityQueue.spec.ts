@@ -1,13 +1,14 @@
 import { PriorityQueue } from "../src/priority-queue";
 
 test("simple priority queue", () => {
+    const before = [5, 1, 8, 9, 11, 9, 11, 3, 4, 5, 6];
+    const expected = Array.from(before);
+    expected.sort((a, b) => a- b);
     const q = new PriorityQueue<number>();
-    q.insert(10);
-    q.insert(4);
-    q.insert(8);
-    expect(q.extract()).toBe(4);
-    expect(q.extract()).toBe(8);
-    expect(q.extract()).toBe(10);
-    expect(q.size()).toBe(0);
-    expect(q.isEmpty()).toBeTruthy();
+    before.forEach((x) => q.insert(x));
+    const result = new Array<number>();
+    while (!q.isEmpty()) {
+        result.push(q.extract());
+    }
+    expect(result).toStrictEqual(expected);
 });

@@ -28,6 +28,7 @@ export class PriorityQueue<T> {
             const parentIndex = getParent(index);
             if (!this.isLower(index, parentIndex)) return;
             this.swap(index, parentIndex);
+            index = parentIndex;
         }
     }
 

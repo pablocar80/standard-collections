@@ -90,7 +90,7 @@ console.log(q.extract().customer);  // tom
 
 This library implements `depth-first` search and `breadth-first` search.
 
-These functions let you iterate over the graphs.
+The `graphSearch` function returns an `Iterable<T>` that iterates by navigating on the graph.
 
 Example:
 

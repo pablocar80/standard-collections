@@ -94,7 +94,7 @@ These functions let you iterate over the graphs.
 
 Example:
 
-``typescript
+```typescript
 import { graphSearch, GraphSearchMethod } from "standard-collections";
 
 interface City {

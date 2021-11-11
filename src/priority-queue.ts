@@ -2,7 +2,7 @@ export type Comparator<T> = (a: T, b: T) => number;
 
 export interface PriorityQueueOptions<T> {
     comparator?: Comparator<T>;
-    initialValues?: ArrayLike<T>;
+    initialValues?: ArrayLike<T> | Iterable<T>;
 }
 
 export class PriorityQueue<T> {

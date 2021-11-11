@@ -85,3 +85,36 @@ console.log(q.extract().customer);  // elsa
 console.log(q.extract().customer);  // john
 console.log(q.extract().customer);  // tom
 ```
+
+## Graph searches
+
+This library implements depth-first search and breadth-first search.
+
+These functions let you iterate over the graphs.
+
+Example:
+
+``typescript
+import { graphSearch, GraphSearchMethod } from "standard-collections";
+
+interface City {
+    id: number;
+    connections: City[];
+}
+
+const c1 = { id: 1, connections: [] };
+const c2 = { id: 2, connections: [] };
+const c3 = { id: 3, connections: [] };
+c1.connections.push(c2);
+c2.connections.push(c3);
+c3.connections.push(c1);
+c3.connections.push(c2);
+
+for (const city of graphSearch({
+    initialNode: c1,
+    getNeighbors: (x) => x.connections,
+    method: GraphSearchMethod.DepthFirst
+})) {
+    console.log(city.id); // prints 1, 2, 3
+}
+```

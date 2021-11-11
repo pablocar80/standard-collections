@@ -3,6 +3,17 @@ import { LinkedNode } from "./linked-node";
 export class Stack<T> {
     private first?: LinkedNode<T>;
 
+    constructor(initialValues?: ArrayLike<T> | Iterable<T>) {
+        this.loadValues(initialValues);
+    }
+
+    private loadValues(initial?: ArrayLike<T> | Iterable<T>): void {
+        if (!initial) return;
+        for (const value of Array.from(initial)) {
+            this.push(value);
+        }
+    }
+
     isEmpty(): boolean {
         return !this.first;
     }

@@ -88,7 +88,7 @@ console.log(q.extract().customer);  // tom
 
 ## Graph searches
 
-This library implements depth-first search and breadth-first search.
+This library implements `depth-first` search and `breadth-first` search.
 
 These functions let you iterate over the graphs.
 

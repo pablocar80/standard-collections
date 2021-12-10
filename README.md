@@ -1,6 +1,11 @@
 # standard-collections
 Standard collections in TypeScript / JavaScript
 
+- Stack
+- Queue
+- Priority Queue
+- BSF/DSF searches
+
 ## Stack
 
 A stack is a last-in first-out collection.
